@@ -64,6 +64,15 @@ final_redCarpet = pd.DataFrame.from_records(redCarpet_data_1ist)
 
 final_redCarpet.to_csv("consolidated_RedCarpet.csv",sep=",",encoding='utf-8')
 
+#749 unique accounts
+new_selection_all = final_redCarpet.groupby('user_id').agg({'user_id':"count"})
+print(new_selection_all.count())
+
+#254 unique accounts that have called-up Trump in Text column.
+new_selection_trump = final_redCarpet[final_redCarpet['text'].str.contains('Trump')].groupby('user_id').agg({'user_id':"count"})
+print(new_selection_trump.count())
+
+
 
 
 
