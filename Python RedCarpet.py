@@ -44,7 +44,8 @@
 #    write = csv.writer(main_file,quoting=csv.QUOTE_NONE)
 #    write.writerow(redCarpet_data_1ist)
 
-#03-05-2018
+#05-03-2018
+
 import json
 import os
 import csv
