@@ -73,6 +73,8 @@ print(new_selection_all.count())
 new_selection_trump = final_redCarpet[final_redCarpet['text'].str.contains('Trump')].groupby('user_id').agg({'user_id':"count"})
 print(new_selection_trump.count())
 
+#This will leave the user with the sorted user_id based upon how frequently they have quoted "Trump"
+print(new_selection_trump.sort_values(['user_id'], ascending='false'))
 
 
 
